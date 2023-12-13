@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+/*BTN BANNER INICIO WATCH*/
+.watch_btn_especial{
+    a{
+        &:hover{
+            background-color: $color_secundario;
+        }
+    }
+}
+
+/*BTN DEL RESTO DE LA PÁGINA*/
+.watch_btn{
+    margin: 20px;
+    a{
+        color: $color_principal;
+        background-color: $color_enlaces;
+        border-radius: 50px;
+        padding: 10px;
+        &:hover{
+            background-color: $color_secundario;
+        }
+    }
+}
+
+/*BANNER INICIO WATCH*/
+.watch_bg{
+    background-image: url(./../media/imagenes/home_banner_watch_mobile.jpg);
+    background-size: contain;
+    height: 500px;
+    background-repeat: no-repeat;
+    .watch_bg_info{
+        text-align: center;
+        h2,p{
+            color: $color_principal;
+            margin: 10px;
+        }
+        .watch_btn_especial{
+            margin: 20px;
+            a{
+                color: $color_principal;
+                background-color: $color_enlaces;
+                border-radius: 50px;
+                padding: 10px;
+                &:hover{
+                    background-color: $color_principal!important;
+                    color: $color_enlaces;
+                    font-weight: bold;
+                }
+            }
+        }
+        .watch_btn_play{
+            display: none;
+            a{
+                color: $color_enlaces;
+                font-weight: bold;
+                &:hover{
+                    border-bottom: 1px solid $color_enlaces;
+                }
+            }
+        }
+    }
+}
+
+/*PRODUCTOS WATCH*/
+.productos_watch{
+    .watch_titulos{
+        text-align: center;
+    }
+    .watch_img_sm{
+        text-align: center;
+    }
+    .watch_img_md{
+        .d-block{
+            display: none;
+        }
+    }    
+}
+
+.productos_watch_extra{
+    .watch_extra_titulos{
+        text-align: center;
+        margin: 20px;
+        img{
+            width: 25%;
+        }
+    }
+}
+
+/*DESCRIPCION PRODUCTOS*/
+.descripcion_productos{
+    text-align: center;
+    margin-top: 80px;
+    h1{
+        margin: 50px;
+    }
+    .productos_contenedor{
+        .contenedor_info{
+            .info_titulos{
+                h2,p{
+                    margin: 10px;
+                }
+            }
+            .caracteristicas{
+                h3,p{
+                    margin: 20px;
+                }
+            }
+        }
+    }
+}
+/*MEDIA QUERIES*/
+@media (min-width: 768px) {
+    /*BANNER INICIO WATCH*/
+    .watch_bg{
+        height: 624px;
+        .watch_bg_info{
+            .watch_btn_play{
+                display: block;
+            }
+        }
+    }
+
+    /*PRODUCTOS WATCH*/
+    .productos_watch{
+        .watch_img_sm{
+            .d-none{
+                display: none;
+            }
+        }
+        .watch_img_md{
+            text-align: center;
+            .d-block{
+                display: block;
+            }
+        }      
+    }
+
+    .productos_watch_extra{
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    /*BANNER INICIO WATCH*/
+    .watch_bg{
+        background-image: url(./../media/imagenes/home_banner_watch.jpg);
+        height: 624px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /*PRODUCTOS WATCH*/
+    .productos_watch{
+        .watch_titulos{
+            margin: 30px;
+        }
+    }
+
+    .productos_watch_extra{
+        display: flex;
+        align-items: center;
+        .watch_extra_titulos{
+            img{
+                width: 40%;
+            }
+        }
+    }
+
+    /*DESCRIPCION PRODUCTOS*/
+    .descripcion_productos{
+        .productos_contenedor{
+            display: flex;
+            justify-content: space-around;
+            .contenedor_info{
+                .caracteristicas{
+                    margin: 40px;
+                }
+            }
+        }
+    }
+
+}
+@media (min-width: 1200px) {
+    /*PRODUCTOS WATCH*/
+    .productos_watch{
+        .watch_img_md{
+            .d-block{
+                width: 100%;
+            }
+        }
+    }
+    .productos_watch_extra{
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+}

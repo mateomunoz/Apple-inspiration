@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+video{
+    max-width: 100%;
+    opacity: .999;
+}
+
+
+/*VIDEO DE FONDO*/
+.inicio_appletv{
+    position: relative;
+    background-color: $color_secundario;
+    .appletv_titulo{
+        position: absolute;
+        z-index: 1;
+        left: 10%;
+        top: 75px;
+        h1{
+            font-weight: 700;
+            font-size: 50px;
+            color: $color_principal;
+        }
+        .appletv_btn{
+            width: 30%;
+            a{
+                color: $color_enlaces;
+                background-color: $color_principal;
+                font-weight: bold;
+                text-align: center;
+                padding: 10px;
+                border-radius: 10px;
+                &:hover{
+                    color: $color_principal;
+                    background-color: $color_secundario;
+                }
+            }
+        }
+    }
+}
+
+/*CARD PRECIOS*/
+.cards_precios{
+    background-color: $color_secundario;
+    color: $color_principal;
+    padding: 20px;
+    .precios_titulos{
+        margin-bottom: 100px;
+        h2{
+            margin: 20px;
+        }
+    }
+    .precios_contenedores{
+        h2{
+            margin: 20px;
+        }
+        .contenedores{
+           margin: 80px;
+            h2{
+                margin: 0!important;
+            }
+            h2,h3,p{
+             padding-bottom: 5px;
+            }
+           .cards_btn{
+                width: 60%;
+                margin-top: 10px;
+                a{
+                    background-color: $color_principal;
+                    color: $color_enlaces;
+                    text-align: center;
+                    font-weight: bold;
+                    padding: 10px;
+                    border-radius: 50px;
+                    &:hover{
+                        background-color: $color_enlaces;
+                        color: $color_principal;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+/*IMAGEN FONDO*/
+.peli_fondo{
+    background-image: url(./../media/imagenes/pagina_tv_bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height:800px ;
+    position: relative;
+    h1{
+        color: $color_principal;
+        font-weight: bold;
+        padding: 10px;
+        position: absolute;
+        top: 400px;
+        font-size: 30px;
+    }
+}
+
+/*SLIDER AUTOMATICO*/
+.slider_automatico{
+    margin: 40px;
+    .marquee-wrapper {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        gap: 1rem;
+        border-radius: 1rem;
+        &:hover .scrollingX {
+            animation-play-state: paused;
+        }
+    .marquee-content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            gap: 1rem;
+            cursor: grab;
+            .card-testimonial {
+                max-width: 400px;
+                background-color: $color_secundario;
+                padding: 1rem;
+                border-radius: 1rem;
+                color: $color_principal;
+                article, picture {
+                    position: relative;
+                    min-width: 200px;
+                    img {
+                        border-radius: 0.5rem;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                        -o-object-position: 50% 15%;
+                        object-position: 50% 15%;
+                    }
+                }
+            }
+        }   
+    }
+}
+
+.scrollingX {
+  animation: scroll 45s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+/*DISPOSITIVOS*/
+.info_dispositivos{
+    margin: 20px;
+    .dispositivos_titulos{
+        text-align: center;
+        h1,p{
+            padding: 10px;
+        }
+        a{
+            color: $color_enlaces;
+            font-weight: bold;
+            border-bottom: 1px solid $color_enlaces;
+        }
+    }
+    .dispositivos_titulos_extra{
+        text-align: center;
+        margin-top: 60px;
+        .titulos_extra_btn{
+            font-weight: bold;
+            color: $color_enlaces;
+            a{
+                &:hover{
+                    border-bottom: 1px solid $color_enlaces;
+                }
+            }
+        }
+    }
+    .dispositivos_contenedor{
+        display: flex;
+        justify-content: space-around;
+        .dispositivos{
+            p{
+                text-align: center;
+                font-weight: bold;
+            }
+        }        
+    }
+    .contenedor_marcas{
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    /*DISPOSITIVOS*/
+    .info_dispositivos{
+        .dispositivos_titulos_extra{
+            margin: 60px;
+            h2{
+                font-size: 30px;
+            }
+        }
+        .contenedor_marcas{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+}
+
+@media (min-width: 992px) { 
+    /*VIDEO DE FONDO*/
+    .inicio_appletv{
+        .appletv_titulo{
+            position: absolute;
+            z-index: 2;
+            top: 110px;
+            left: 35px;
+            h1{
+                font-weight: 900;
+                font-size: 80px;
+                color: $color_principal;
+            }
+            .appletv_btn{
+                width: 40%;
+                padding: 10px;
+            }
+
+        }
+    }
+
+    /*CARDS PRECIOS*/
+    .cards_precios{
+        .precios_titulos{
+            font-size: 30px;
+        }
+        .precios_contenedores{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: end;
+            h2{
+                width: 100%;
+            }
+            .contenedores{
+                width: 25%;
+                margin: 0;
+                .cards_btn{
+                    width: 90%;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    /*IMAGEN FONDO*/
+    .peli_fondo{
+        h1{
+            font-size: 50px;
+        }
+    }
+
+    /*DISPOSITIVOS*/
+    .info_dispositivos{
+        .dispositivos_titulos{
+            h1{
+                font-size: 40px;
+            }
+        }
+        .dispositivos_contenedor{
+            margin-top: 60px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    /*DISPOSITIVOS*/
+    .info_dispositivos{
+        .dispositivos_titulos{
+            h1{
+                font-size: 50px;
+            }
+        }
+        .dispositivos_titulos_extra{
+            margin: 60px;
+            h2{
+                font-size: 30px;
+            }
+        }
+        .dispositivos_contenedor{
+            margin-top: 80px;
+        }
+    }
+}

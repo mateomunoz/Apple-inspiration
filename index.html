@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLE</title>
+    <link rel="stylesheet" href="estilos/all.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="js/all.js"></script>
+    <script src="js/slider_home.js" defer></script>
+</head>
+<body>
+    <!--MENÚ-->
+     <header>
+      <div class="container_logo">
+        <img src="media/imagenes/logo_principal.jpg" alt="" />
+        <div>
+          <i class="fa-solid fa-bars burger_icon"></i>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="watch.html">APPLE WATCH</a></li>
+          <li><a href="appletv.html">APPLE TV+</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--BANNER INICIAL-->
+    <section class="banner_gift" 
+      data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+        <div class="banner_gift_info">
+            <img src="media/imagenes/home_banner1.png" alt="">
+            <h2>Será Maravilloso.</h2>
+            <p>Dales la sorpresa que han soñado todo el año.</p>
+            <div class="home_btn">
+                <a href="watch.html">Ver regalos > </a>
+            </div>
+        </div>
+        
+    </section>
+    <!--BANNER WATCH-->
+    <section class="banner_watch">
+        
+        <div class="banner_watch_info">
+            <img src="media/imagenes/home_logo_watch.png" alt="">
+            <h2>Una mente más brillante</h2>
+            <div class="home_btn">
+                <a href="watch.html">Comprar > </a>
+            </div>
+        </div>
+    </section>
+    <!--CARDS PRODUCTOS-->
+    <section class="productos">
+      <div class="productos_card">
+        <div class="productos_card_info card_info_watch">
+          <img src="media/imagenes/logo_watch.png" alt="">
+          <p>La aventura continúa.</p>
+          <div class="home_btn">
+            <a href="watch.html">Comprar ></a>
+          </div>
+        </div>
+        <img class="d-block" src="media/imagenes/home_card4.jpg" alt="">
+        <img class="d-none" src="media/imagenes/home_card4_cut.jpg" alt="">
+      </div>
+      <div class="productos_card">
+        <div class="productos_card_info card_info_mac">
+          <h2>MacBook Pro</h2>
+          <p>Una belleza salvaje.</p>
+          <div class="home_btn">
+            <a href="watch.html">Comprar ></a>
+          </div>
+        </div> 
+        <img class="d-block" src="media/imagenes/home_card2.jpg" alt="">
+        <img class="d-none" src="media/imagenes/home_card2_cut.jpg" alt="">
+      </div>
+      <div class="productos_card">
+        <div class="productos_card_info card_info_iphone">
+          <h2>iPhone 15</h2>
+          <p>Nueva cámara. Nuevo diseño. Vente arriba</p>
+          <div class="home_btn">
+            <a href="watch.html">Comprar ></a>
+          </div>
+        </div>
+         <img class="d-block" src="media/imagenes/home_card3.jpg" alt="">
+         <img class="d-none" src="media/imagenes/home_card3_cut.jpg" alt="">
+      </div>
+      <div class="productos_card">
+        <div class="productos_card_info card_info_airpods">
+          <h2>AirPods Pro</h2>
+          <p>Audio adaptativo. Ahora te escucho</p>
+          <div class="home_btn">
+            <a href="watch.html">Comprar ></a>
+          </div>
+        </div>
+          <img class="d-block" src="media/imagenes/home_card.jpg" alt="">
+          <img class="d-none" src="media/imagenes/home_card_cut.jpg" alt="">
+        </div>
+    </section>
+    <!--SLIDER PELICULAS-->
+    <section id="carrusel">
+      <h1 data-aos="zoom-in">Echa un vistazo a nuestra selección de entretenimiento</h1>
+      <div class="carrusel_btn" data-aos="zoom-in">
+        <a href="appletv.html">Ver más ></a>
+      </div>
+        <div class="carrusel_img">
+            <img src="media/imagenes/home_slider.webp" alt="" id="foto-grande">
+        </div>
+        <div class="flechas">
+            <img src="media/imagenes/flecha-izq.png" alt="" id="atras">
+            <img src="media/imagenes/flecha-drch.png" alt="" id="adelante">
+        </div>
+        <div class="puntos">
+            <img src="media/imagenes/circulo-negro.png" alt="">
+            <img src="media/imagenes/circulo-vacio.png" alt="">
+            <img src="media/imagenes/circulo-vacio.png" alt="">
+            <img src="media/imagenes/circulo-vacio.png" alt="">
+            <img src="media/imagenes/circulo-vacio.png" alt="">
+            <img src="media/imagenes/circulo-vacio.png" alt="">
+            <img src="media/imagenes/circulo-vacio.png" alt="">
+            <img src="media/imagenes/circulo-vacio.png" alt="">
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer>
+      <div class="logo_footer">
+        <img src="media/imagenes/logo_principal.jpg" alt="">
+      </div>
+      <div class="rrss_footer">
+        <a href="https://www.instagram.com/apple/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/Apple"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.tiktok.com/@apple?lang=es"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

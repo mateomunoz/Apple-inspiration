@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+/*BTN DE TODA LA PÁGINA*/
+.home_btn{
+    a{
+        color: $color_enlaces;
+        font-weight: bold;
+        &:hover{
+            border-bottom: 1px solid $color_enlaces;
+        }
+    }
+}
+
+/*BANNER INICIO*/
+.banner_gift{
+    margin: 20px;
+    .banner_gift_info{
+        text-align: center;
+        h2,p{
+            padding: 10px;
+        }
+    }
+}
+
+/*BANNER WATCH*/
+.banner_watch{
+    background-image: url(./../media/imagenes/home_banner_watch_mobile.jpg);
+    background-size: contain;
+    height: 500px;
+    background-repeat: no-repeat;
+    .banner_watch_desktop{
+        display: none;
+    }
+    .banner_watch_info{
+        text-align: center;
+        padding: 20px;
+        h2{
+            color: $color_principal;
+        }
+        .home_btn{
+            a{
+                color: $color_enlaces;
+            }
+        }
+    }
+}
+
+/*CARDS PRODUCTOS*/
+.productos{
+    text-align: center;
+    .productos_card{
+        position: relative;
+        .productos_card_info{
+            position: absolute;
+            right: 190px;
+            margin:10px;
+        
+        }
+        .card_info_iphone{
+            right: 105px!important;
+        }
+        .card_info_airpods{
+            color: $color_principal;
+            right: 135px!important;
+        }
+        .d-none{
+            display: none;
+        }
+    }
+    
+}
+
+/*SLIDER*/
+#carrusel{
+    width: 100%;
+    margin: 50px auto;
+    position: relative;
+    h1{
+        text-align: center;
+        margin: 20px;
+    }
+    .carrusel_btn{
+        text-align: center;
+        margin: 10px;
+        a{
+            color: $color_enlaces;
+            font-weight: bold;
+            &:hover{
+                border-bottom: 1px solid $color_enlaces;
+            }
+        }
+    }
+    .carrusel_img{
+        text-align: center;
+        img{
+            width: 1250px;
+        }
+    }
+    .flechas{
+        width: 90%;
+        margin: 0 20px;
+        position: absolute;
+        top: 45%;
+        display: flex;
+        justify-content: space-between;
+        img{
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid $color_secundario;
+            border-radius: 50px;
+            background-color: $color_principal;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.37);
+            }
+        }
+    }
+    .puntos{
+        text-align: center;
+    }
+}
+
+/*FOOTER*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color_secundario;
+    .rrss_footer{
+        margin: 20px;
+        a{
+            color: $color_principal;
+            font-size: 20px;
+            padding: 10px;
+            &:hover{
+                border-bottom: 1px solid $color_principal;
+            }
+        }
+        
+    }
+}
+
+/*MEDIA QUERIES*/
+@media (min-width: 768px) { 
+    /*BANNER WATCH*/
+    .banner_watch{
+        height: 624px;
+    }
+    /*CARDS PRODUCTOS*/
+    .productos{
+        .productos_card{
+            .productos_card_info{
+                right: 280px;
+            }
+            .card_info_iphone{
+                right: 190px!important;
+            }
+            .card_info_airpods{
+                right: 220px!important;
+            }
+        }
+    }
+    
+}
+@media (min-width: 992px) { 
+    /*BANNER WATCH*/
+   .banner_watch{
+    background-image: url(./../media/imagenes/home_banner_watch.jpg);
+    height: 624px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+       .banner_watch_info{
+            padding: 20px;
+        }
+    }
+    /*CARD PRODUCTOS*/
+    .productos{
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            margin: 50px auto;
+            align-items: center;
+        .productos_card{
+            width: 50%;
+            .d-none{
+                display: block;
+            }
+            .d-block{
+                display: none;
+            }
+            .productos_card_info{
+                right: 140px;
+                top: 50px;
+            }
+            .card_info_iphone{
+                right: 55px!important;
+            }
+            .card_info_airpods{
+                right: 65px!important;
+            }
+        }
+    }
+    /*SLIDER*/
+    #carrusel{
+        .flechas{
+            width: 95%;
+            margin: 0 35px;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    /*CARD PRODUCTOS*/
+    .productos{
+        .productos_card{
+            position: static;
+           .productos_card_info{
+                //right: 200px;
+                position: static;
+            }
+            .card_info_watch{
+                background-image: url(./../media/imagenes/home_card4_cut.jpg);
+                background-size: cover;
+                width: 500px;
+                height: 580px;
+                padding: 40px;
+            }
+            .card_info_mac{
+                background-image: url(./../media/imagenes/home_card2_cut.jpg);
+                background-size: cover;
+                width: 500px;
+                height: 580px;
+                padding: 40px;
+            }
+            .card_info_iphone{
+                //right: 105px!important;
+                background-image: url(./../media/imagenes/home_card3_cut.jpg);
+                background-size: cover;
+                width: 500px;
+                height: 580px;
+                padding: 40px;
+            }
+            .card_info_airpods{
+                //right: 135px!important;
+                background-image: url(./../media/imagenes/home_card_cut.jpg);
+                background-size: cover;
+                width: 500px;
+                height: 580px;
+                padding: 40px;
+            }
+            .d-none, .d-block{
+                display: none;
+            }
+        }
+    }
+    
+}
+

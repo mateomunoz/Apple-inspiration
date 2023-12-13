@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+/*ESTILOS HEADER MÓVIL*/
+
+header {
+    .container_logo{
+        background-color: $color_principal;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        z-index: 2;
+    }
+    .burger_icon{
+        color: $color_secundario;
+        transition: all 0.5s ease;
+        &:hover{
+            color: $color_principal;
+            background-color: $color_secundario;
+            transition: all 0.5s ease;
+        }
+    }
+    &:hover nav{
+        top:100px;
+        transition: all 0.5s ease;
+        color: $color_principal;
+    }
+}
+nav{
+    background-color: $color_secundario;
+    position: absolute;
+    width: 100%;
+    top:-300px;
+    transition: all 0.5s ease;
+    z-index: 3;
+    ul li a{
+        display: block;
+        padding: 10px;
+        color: $color_principal;
+        transition: all 0.5s ease;
+        border-bottom: 1px solid $color_principal;
+        &:hover{
+            border-bottom: 1px solid $color_principal;
+            transition: all 0.5s ease;
+        }
+    }
+}
+
+/*FIN HEADER MÓVIL*/
+
+/*INICIO MEDIA QUERIES*/
+
+@media (min-width: 576px) { } 
+
+@media (min-width: 768px) { 
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color_secundario;
+        .container_logo{
+            
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+        .burger_icon{
+            display: none;
+            &:hover{
+                color: $color_principal;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+    nav{
+        background-color: $color_secundario;
+        position: static;
+        text-align: center;
+        ul li{
+            display: inline-block;
+            width: 150px;
+           a{
+                position: relative;
+                border-bottom: 0;
+                &:hover{
+                    border-bottom: 1px solid $color_principal;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+/*FIN MEDIA QUERIES*/

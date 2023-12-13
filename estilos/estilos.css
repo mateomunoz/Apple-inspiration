@@ -1,0 +1,820 @@
+@charset "UTF-8";
+/*MEDIA QUERIES REUTILIZABLES PARA TODAS LAS PAGINAS
+@media (min-width: 576px) { } 
+@media (min-width: 768px) { }
+@media (min-width: 992px) { }
+@media (min-width: 1200px) { }
+*/
+/*SISTEMA DE COL
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*ESTILOS HEADER MÓVIL*/
+header .container_logo {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 2;
+}
+header .burger_icon {
+  color: #000000;
+  transition: all 0.5s ease;
+}
+header .burger_icon:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+  transition: all 0.5s ease;
+}
+header:hover nav {
+  top: 100px;
+  transition: all 0.5s ease;
+  color: #FFFFFF;
+}
+
+nav {
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  top: -300px;
+  transition: all 0.5s ease;
+  z-index: 3;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: #FFFFFF;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid #FFFFFF;
+}
+nav ul li a:hover {
+  border-bottom: 1px solid #FFFFFF;
+  transition: all 0.5s ease;
+}
+
+/*FIN HEADER MÓVIL*/
+/*INICIO MEDIA QUERIES*/
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+  }
+  header .container_logo {
+    text-align: center;
+    position: relative;
+    z-index: 3;
+  }
+  header .burger_icon {
+    display: none;
+  }
+  header .burger_icon:hover {
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+  }
+  nav {
+    background-color: #000000;
+    position: static;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+    width: 150px;
+  }
+  nav ul li a {
+    position: relative;
+    border-bottom: 0;
+  }
+  nav ul li a:hover {
+    border-bottom: 1px solid #FFFFFF;
+    transition: all 0.5s ease;
+  }
+}
+/*FIN MEDIA QUERIES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*BTN DE TODA LA PÁGINA*/
+.home_btn a {
+  color: #175590;
+  font-weight: bold;
+}
+.home_btn a:hover {
+  border-bottom: 1px solid #175590;
+}
+
+/*BANNER INICIO*/
+.banner_gift {
+  margin: 20px;
+}
+.banner_gift .banner_gift_info {
+  text-align: center;
+}
+.banner_gift .banner_gift_info h2, .banner_gift .banner_gift_info p {
+  padding: 10px;
+}
+
+/*BANNER WATCH*/
+.banner_watch {
+  background-image: url(./../media/imagenes/home_banner_watch_mobile.jpg);
+  background-size: contain;
+  height: 500px;
+  background-repeat: no-repeat;
+}
+.banner_watch .banner_watch_desktop {
+  display: none;
+}
+.banner_watch .banner_watch_info {
+  text-align: center;
+  padding: 20px;
+}
+.banner_watch .banner_watch_info h2 {
+  color: #FFFFFF;
+}
+.banner_watch .banner_watch_info .home_btn a {
+  color: #175590;
+}
+
+/*CARDS PRODUCTOS*/
+.productos {
+  text-align: center;
+}
+.productos .productos_card {
+  position: relative;
+}
+.productos .productos_card .productos_card_info {
+  position: absolute;
+  right: 190px;
+  margin: 10px;
+}
+.productos .productos_card .card_info_iphone {
+  right: 105px !important;
+}
+.productos .productos_card .card_info_airpods {
+  color: #FFFFFF;
+  right: 135px !important;
+}
+.productos .productos_card .d-none {
+  display: none;
+}
+
+/*SLIDER*/
+#carrusel {
+  width: 100%;
+  margin: 50px auto;
+  position: relative;
+}
+#carrusel h1 {
+  text-align: center;
+  margin: 20px;
+}
+#carrusel .carrusel_btn {
+  text-align: center;
+  margin: 10px;
+}
+#carrusel .carrusel_btn a {
+  color: #175590;
+  font-weight: bold;
+}
+#carrusel .carrusel_btn a:hover {
+  border-bottom: 1px solid #175590;
+}
+#carrusel .carrusel_img {
+  text-align: center;
+}
+#carrusel .carrusel_img img {
+  width: 1250px;
+}
+#carrusel .flechas {
+  width: 90%;
+  margin: 0 20px;
+  position: absolute;
+  top: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+#carrusel .flechas img {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  background-color: #FFFFFF;
+}
+#carrusel .flechas img:hover {
+  background-color: rgba(255, 255, 255, 0.37);
+}
+#carrusel .puntos {
+  text-align: center;
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+}
+footer .rrss_footer {
+  margin: 20px;
+}
+footer .rrss_footer a {
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 10px;
+}
+footer .rrss_footer a:hover {
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/*MEDIA QUERIES*/
+@media (min-width: 768px) {
+  /*BANNER WATCH*/
+  .banner_watch {
+    height: 624px;
+  }
+  /*CARDS PRODUCTOS*/
+  .productos .productos_card .productos_card_info {
+    right: 280px;
+  }
+  .productos .productos_card .card_info_iphone {
+    right: 190px !important;
+  }
+  .productos .productos_card .card_info_airpods {
+    right: 220px !important;
+  }
+}
+@media (min-width: 992px) {
+  /*BANNER WATCH*/
+  .banner_watch {
+    background-image: url(./../media/imagenes/home_banner_watch.jpg);
+    height: 624px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  .banner_watch .banner_watch_info {
+    padding: 20px;
+  }
+  /*CARD PRODUCTOS*/
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 50px auto;
+    align-items: center;
+  }
+  .productos .productos_card {
+    width: 50%;
+  }
+  .productos .productos_card .d-none {
+    display: block;
+  }
+  .productos .productos_card .d-block {
+    display: none;
+  }
+  .productos .productos_card .productos_card_info {
+    right: 140px;
+    top: 50px;
+  }
+  .productos .productos_card .card_info_iphone {
+    right: 55px !important;
+  }
+  .productos .productos_card .card_info_airpods {
+    right: 65px !important;
+  }
+  /*SLIDER*/
+  #carrusel .flechas {
+    width: 95%;
+    margin: 0 35px;
+  }
+}
+@media (min-width: 1200px) {
+  /*CARD PRODUCTOS*/
+  .productos .productos_card {
+    position: static;
+  }
+  .productos .productos_card .productos_card_info {
+    position: static;
+  }
+  .productos .productos_card .card_info_watch {
+    background-image: url(./../media/imagenes/home_card4_cut.jpg);
+    background-size: cover;
+    width: 500px;
+    height: 580px;
+    padding: 40px;
+  }
+  .productos .productos_card .card_info_mac {
+    background-image: url(./../media/imagenes/home_card2_cut.jpg);
+    background-size: cover;
+    width: 500px;
+    height: 580px;
+    padding: 40px;
+  }
+  .productos .productos_card .card_info_iphone {
+    background-image: url(./../media/imagenes/home_card3_cut.jpg);
+    background-size: cover;
+    width: 500px;
+    height: 580px;
+    padding: 40px;
+  }
+  .productos .productos_card .card_info_airpods {
+    background-image: url(./../media/imagenes/home_card_cut.jpg);
+    background-size: cover;
+    width: 500px;
+    height: 580px;
+    padding: 40px;
+  }
+  .productos .productos_card .d-none, .productos .productos_card .d-block {
+    display: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*BTN BANNER INICIO WATCH*/
+.watch_btn_especial a:hover {
+  background-color: #000000;
+}
+
+/*BTN DEL RESTO DE LA PÁGINA*/
+.watch_btn {
+  margin: 20px;
+}
+.watch_btn a {
+  color: #FFFFFF;
+  background-color: #175590;
+  border-radius: 50px;
+  padding: 10px;
+}
+.watch_btn a:hover {
+  background-color: #000000;
+}
+
+/*BANNER INICIO WATCH*/
+.watch_bg {
+  background-image: url(./../media/imagenes/home_banner_watch_mobile.jpg);
+  background-size: contain;
+  height: 500px;
+  background-repeat: no-repeat;
+}
+.watch_bg .watch_bg_info {
+  text-align: center;
+}
+.watch_bg .watch_bg_info h2, .watch_bg .watch_bg_info p {
+  color: #FFFFFF;
+  margin: 10px;
+}
+.watch_bg .watch_bg_info .watch_btn_especial {
+  margin: 20px;
+}
+.watch_bg .watch_bg_info .watch_btn_especial a {
+  color: #FFFFFF;
+  background-color: #175590;
+  border-radius: 50px;
+  padding: 10px;
+}
+.watch_bg .watch_bg_info .watch_btn_especial a:hover {
+  background-color: #FFFFFF !important;
+  color: #175590;
+  font-weight: bold;
+}
+.watch_bg .watch_bg_info .watch_btn_play {
+  display: none;
+}
+.watch_bg .watch_bg_info .watch_btn_play a {
+  color: #175590;
+  font-weight: bold;
+}
+.watch_bg .watch_bg_info .watch_btn_play a:hover {
+  border-bottom: 1px solid #175590;
+}
+
+/*PRODUCTOS WATCH*/
+.productos_watch .watch_titulos {
+  text-align: center;
+}
+.productos_watch .watch_img_sm {
+  text-align: center;
+}
+.productos_watch .watch_img_md .d-block {
+  display: none;
+}
+
+.productos_watch_extra .watch_extra_titulos {
+  text-align: center;
+  margin: 20px;
+}
+.productos_watch_extra .watch_extra_titulos img {
+  width: 25%;
+}
+
+/*DESCRIPCION PRODUCTOS*/
+.descripcion_productos {
+  text-align: center;
+  margin-top: 80px;
+}
+.descripcion_productos h1 {
+  margin: 50px;
+}
+.descripcion_productos .productos_contenedor .contenedor_info .info_titulos h2, .descripcion_productos .productos_contenedor .contenedor_info .info_titulos p {
+  margin: 10px;
+}
+.descripcion_productos .productos_contenedor .contenedor_info .caracteristicas h3, .descripcion_productos .productos_contenedor .contenedor_info .caracteristicas p {
+  margin: 20px;
+}
+
+/*MEDIA QUERIES*/
+@media (min-width: 768px) {
+  /*BANNER INICIO WATCH*/
+  .watch_bg {
+    height: 624px;
+  }
+  .watch_bg .watch_bg_info .watch_btn_play {
+    display: block;
+  }
+  /*PRODUCTOS WATCH*/
+  .productos_watch .watch_img_sm .d-none {
+    display: none;
+  }
+  .productos_watch .watch_img_md {
+    text-align: center;
+  }
+  .productos_watch .watch_img_md .d-block {
+    display: block;
+  }
+  .productos_watch_extra {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  /*BANNER INICIO WATCH*/
+  .watch_bg {
+    background-image: url(./../media/imagenes/home_banner_watch.jpg);
+    height: 624px;
+    background-size: cover;
+    background-position: center;
+  }
+  /*PRODUCTOS WATCH*/
+  .productos_watch .watch_titulos {
+    margin: 30px;
+  }
+  .productos_watch_extra {
+    display: flex;
+    align-items: center;
+  }
+  .productos_watch_extra .watch_extra_titulos img {
+    width: 40%;
+  }
+  /*DESCRIPCION PRODUCTOS*/
+  .descripcion_productos .productos_contenedor {
+    display: flex;
+    justify-content: space-around;
+  }
+  .descripcion_productos .productos_contenedor .contenedor_info .caracteristicas {
+    margin: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  /*PRODUCTOS WATCH*/
+  .productos_watch .watch_img_md .d-block {
+    width: 100%;
+  }
+  .productos_watch_extra {
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+video {
+  max-width: 100%;
+  opacity: 0.999;
+}
+
+/*VIDEO DE FONDO*/
+.inicio_appletv {
+  position: relative;
+  background-color: #000000;
+}
+.inicio_appletv .appletv_titulo {
+  position: absolute;
+  z-index: 1;
+  left: 10%;
+  top: 75px;
+}
+.inicio_appletv .appletv_titulo h1 {
+  font-weight: 700;
+  font-size: 50px;
+  color: #FFFFFF;
+}
+.inicio_appletv .appletv_titulo .appletv_btn {
+  width: 30%;
+}
+.inicio_appletv .appletv_titulo .appletv_btn a {
+  color: #175590;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+.inicio_appletv .appletv_titulo .appletv_btn a:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+/*CARD PRECIOS*/
+.cards_precios {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 20px;
+}
+.cards_precios .precios_titulos {
+  margin-bottom: 100px;
+}
+.cards_precios .precios_titulos h2 {
+  margin: 20px;
+}
+.cards_precios .precios_contenedores h2 {
+  margin: 20px;
+}
+.cards_precios .precios_contenedores .contenedores {
+  margin: 80px;
+}
+.cards_precios .precios_contenedores .contenedores h2 {
+  margin: 0 !important;
+}
+.cards_precios .precios_contenedores .contenedores h2, .cards_precios .precios_contenedores .contenedores h3, .cards_precios .precios_contenedores .contenedores p {
+  padding-bottom: 5px;
+}
+.cards_precios .precios_contenedores .contenedores .cards_btn {
+  width: 60%;
+  margin-top: 10px;
+}
+.cards_precios .precios_contenedores .contenedores .cards_btn a {
+  background-color: #FFFFFF;
+  color: #175590;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 50px;
+}
+.cards_precios .precios_contenedores .contenedores .cards_btn a:hover {
+  background-color: #175590;
+  color: #FFFFFF;
+}
+
+/*IMAGEN FONDO*/
+.peli_fondo {
+  background-image: url(./../media/imagenes/pagina_tv_bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  position: relative;
+}
+.peli_fondo h1 {
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 10px;
+  position: absolute;
+  top: 400px;
+  font-size: 30px;
+}
+
+/*SLIDER AUTOMATICO*/
+.slider_automatico {
+  margin: 40px;
+}
+.slider_automatico .marquee-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+.slider_automatico .marquee-wrapper:hover .scrollingX {
+  animation-play-state: paused;
+}
+.slider_automatico .marquee-wrapper .marquee-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 1rem;
+  cursor: grab;
+}
+.slider_automatico .marquee-wrapper .marquee-content .card-testimonial {
+  max-width: 400px;
+  background-color: #000000;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #FFFFFF;
+}
+.slider_automatico .marquee-wrapper .marquee-content .card-testimonial article, .slider_automatico .marquee-wrapper .marquee-content .card-testimonial picture {
+  position: relative;
+  min-width: 200px;
+}
+.slider_automatico .marquee-wrapper .marquee-content .card-testimonial article img, .slider_automatico .marquee-wrapper .marquee-content .card-testimonial picture img {
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 15%;
+  object-position: 50% 15%;
+}
+
+.scrollingX {
+  animation: scroll 45s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+/*DISPOSITIVOS*/
+.info_dispositivos {
+  margin: 20px;
+}
+.info_dispositivos .dispositivos_titulos {
+  text-align: center;
+}
+.info_dispositivos .dispositivos_titulos h1, .info_dispositivos .dispositivos_titulos p {
+  padding: 10px;
+}
+.info_dispositivos .dispositivos_titulos a {
+  color: #175590;
+  font-weight: bold;
+  border-bottom: 1px solid #175590;
+}
+.info_dispositivos .dispositivos_titulos_extra {
+  text-align: center;
+  margin-top: 60px;
+}
+.info_dispositivos .dispositivos_titulos_extra .titulos_extra_btn {
+  font-weight: bold;
+  color: #175590;
+}
+.info_dispositivos .dispositivos_titulos_extra .titulos_extra_btn a:hover {
+  border-bottom: 1px solid #175590;
+}
+.info_dispositivos .dispositivos_contenedor {
+  display: flex;
+  justify-content: space-around;
+}
+.info_dispositivos .dispositivos_contenedor .dispositivos p {
+  text-align: center;
+  font-weight: bold;
+}
+.info_dispositivos .contenedor_marcas {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  /*DISPOSITIVOS*/
+  .info_dispositivos .dispositivos_titulos_extra {
+    margin: 60px;
+  }
+  .info_dispositivos .dispositivos_titulos_extra h2 {
+    font-size: 30px;
+  }
+  .info_dispositivos .contenedor_marcas {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 992px) {
+  /*VIDEO DE FONDO*/
+  .inicio_appletv .appletv_titulo {
+    position: absolute;
+    z-index: 2;
+    top: 110px;
+    left: 35px;
+  }
+  .inicio_appletv .appletv_titulo h1 {
+    font-weight: 900;
+    font-size: 80px;
+    color: #FFFFFF;
+  }
+  .inicio_appletv .appletv_titulo .appletv_btn {
+    width: 40%;
+    padding: 10px;
+  }
+  /*CARDS PRECIOS*/
+  .cards_precios .precios_titulos {
+    font-size: 30px;
+  }
+  .cards_precios .precios_contenedores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: end;
+  }
+  .cards_precios .precios_contenedores h2 {
+    width: 100%;
+  }
+  .cards_precios .precios_contenedores .contenedores {
+    width: 25%;
+    margin: 0;
+  }
+  .cards_precios .precios_contenedores .contenedores .cards_btn {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  /*IMAGEN FONDO*/
+  .peli_fondo h1 {
+    font-size: 50px;
+  }
+  /*DISPOSITIVOS*/
+  .info_dispositivos .dispositivos_titulos h1 {
+    font-size: 40px;
+  }
+  .info_dispositivos .dispositivos_contenedor {
+    margin-top: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  /*DISPOSITIVOS*/
+  .info_dispositivos .dispositivos_titulos h1 {
+    font-size: 50px;
+  }
+  .info_dispositivos .dispositivos_titulos_extra {
+    margin: 60px;
+  }
+  .info_dispositivos .dispositivos_titulos_extra h2 {
+    font-size: 30px;
+  }
+  .info_dispositivos .dispositivos_contenedor {
+    margin-top: 80px;
+  }
+}/*# sourceMappingURL=estilos.css.map */
